@@ -11,7 +11,7 @@ $json=array();
 		
 		$conexion=mysqli_connect($hostname,$username,$password,$database);
 		
-		$consulta="SELECT user, pwd, names FROM users WHERE user= '{$user}' AND pwd = '{$pwd}'";
+		$consulta="SELECT names, user, password  FROM users WHERE user= '{$user}' AND password = '{$pwd}'";
 		$resultado=mysqli_query($conexion,$consulta);
 
 		if($consulta){
@@ -27,7 +27,7 @@ $json=array();
 
 		else{
 			$results["user"]='';
-			$results["pwd"]='';
+			$results["password"]='';
 			$results["names"]='';
 			$json['datos'][]=$results;
 			echo json_encode($json);
@@ -36,7 +36,7 @@ $json=array();
 	}
 	else{
 		   	$results["user"]='';
-			$results["pwd"]='';
+			$results["password"]='';
 			$results["names"]='';
 			$json['datos'][]=$results;
 			echo json_encode($json);
