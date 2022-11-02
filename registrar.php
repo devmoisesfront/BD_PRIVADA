@@ -11,12 +11,12 @@ $json=array();
 		
 		$conexion=mysqli_connect($hostname,$username,$password,$database);
 		
-		$consulta="INSERT INTO usuarios(names, user, pwd) VALUES ('{$names}','{$user}' , '{$pwd}')";
+		$consulta="INSERT INTO user(names, user, pwd) VALUES ('{$names}','{$user}' , '{$pwd}')";
 		$resultado=mysqli_query($conexion,$consulta);
 
        
 		if($consulta){
-		   $consulta="SELECT * FROM usuarios  WHERE names='{$names}'";
+		   $consulta="SELECT * FROM user  WHERE names='{$names}'";
 		   $resultado=mysqli_query($conexion,$consulta);
 
 			if($reg=mysqli_fetch_array($resultado)){

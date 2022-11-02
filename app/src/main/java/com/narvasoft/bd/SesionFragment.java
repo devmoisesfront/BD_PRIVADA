@@ -31,8 +31,8 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
     EditText txtUser, txtPwd;
     Button btnConsultar;
 
-
     @Override
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -50,7 +50,6 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
         });
         return vista;
     }
-
 
     @Override
     public void onErrorResponse(VolleyError error) {
@@ -80,10 +79,16 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
 
     }
     void iniciarSesion(){
-        String url ="http://192.168.1.105/login/sesion.php?user="+txtUser.getText().toString()+
-          "&pwd="+txtPwd.getText().toString();
+        String url ="https://catolicadelnorte.000webhostapp.com/sesion.php?user="+txtUser.getText().toString()+
+               "&pwd="+txtPwd.getText().toString();
         jrq = new JsonObjectRequest(Request.Method.GET,url, (String) null,this, this);
         rq.add(jrq);
     }
+    //void iniciarSesion(){
+      //  String url ="http://192.168.0.3/login/sesion.php?user="+txtUser.getText().toString()+
+        //  "&pwd="+txtPwd.getText().toString();
+        //jrq = new JsonObjectRequest(Request.Method.GET,url, (String) null,this, this);
+        //rq.add(jrq);
+    //}
 
 }

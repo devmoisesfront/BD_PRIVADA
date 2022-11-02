@@ -1,8 +1,8 @@
 <?PHP
 $hostname="localhost";
-$database="test";
-$username="root";
-$password="";
+$database="id19720073_test";
+$username="id19720073_admin1";
+$password="_J+K*ufXsR(0$~8f";
 
 $json=array();
 	if(isset($_GET["user"]) && isset($_GET["pwd"])){
